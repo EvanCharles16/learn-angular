@@ -1,3 +1,50 @@
-<p>servers works!</p>
+<!-- NOTES !!! -->
+<!-- $event => object to fetch the event data -->
+<!-- $event => super important is kind of a reserved variable name, you can use in the template when using event binding 
+    For this event , so only between these quotation marks (click) ="onCreateServer()" here, $event will be simply be the data emitted with that event. 
+-->
+
+<!-- input and click are default events provided by DOM, and they ship some data when they are fired, T
+    he click event gives us an object which for example holds the coordinates where we clicked and the input event also gives us some data , some information about the event
+    Now we can caputre this data with $event passed as an argument to the method called or used anywhere between these quotation marks in the code we're executing, $event, 
+    something to keep in mind, reserved word which gives us access to event data.
+-->
+
+<!--  -->
+<!-- Learn Data Binding vs Two-Ways-Binding -->
+
+<!-- <label>Server Name</label>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)" />
+
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+<p>{{ serverName }}</p>
+
+<button
+  class="btn btn-primary mb-4"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+>
+  Add Server
+</button>
+
+<p [innerText]="allowNewServer"></p>
+<p>{{ serverCreationStatus }}</p>
+
 <app-server></app-server>
-<app-server></app-server>
+<app-server></app-server> -->
+
+<label>Username</label>
+<input type="text" class="form-control" [(ngModel)]="userName" />
+<p>{{ userName }}</p>
+
+<button
+  class="btn btn-danger mr-3 mb-3"
+  [disabled]="userName === ''"
+  (click)="this.userName = ''"
+>
+  Reset User
+</button>
+<button class="btn btn-success mb-3" (click)="onCreateUser()">
+  Add User
+</button>
+<p>{{ userCreationStatus }}</p>
