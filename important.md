@@ -34,6 +34,17 @@
     <h5>React to (User) Events (From HTML to Business Logic)</h5>
 </ol>
 
+<h3>Directives</h3>
+<p>Directives are instructions in the DOM <br/> Example : selector</p>
+
+\* => a structural directive.
+
+\*ngIf => a structural directive which means it changes the structure of our DOM, it either adds this element or it doesn't add it.
+
+\*ngFor => changing the DOM itself.
+
+Unlike structural directives, attribute directives dont add or remove elements. They only change the element they were placed on.
+
 <h3>Services & Dependency Injection</h3>
 <p>A core feature of Angular which makes it really easy for you to have your different pieces of your app communicate with each other, to centralize code and to manage the state of your application.</p>
 
