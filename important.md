@@ -37,11 +37,16 @@
 <h3>Directives</h3>
 <p>Directives are instructions in the DOM <br/> Example : selector</p>
 
-\* => a structural directive.
+- \* => a structural directive.
 
-\*ngIf => a structural directive which means it changes the structure of our DOM, it either adds this element or it doesn't add it.
+- \*ngIf => a structural directive which means it changes the structure of our DOM, it either adds this element or it doesn't add it.
 
-\*ngFor => changing the DOM itself.
+- \*ngFor => changing the DOM itself.
+
+- ng-style , is used to interpolate javascript object into style attribute, not css class. <br/> Example : ng-style = "{color : red}" => Following directive will be translated to style="color:red"
+
+* ng-class , is used to directive translates your object into class attribute. <br/>
+  Example : ng-class="{'deleted': isDeleted}" => Following will be translated to class="deleted" when isDeleted variable is true.
 
 Unlike structural directives, attribute directives dont add or remove elements. They only change the element they were placed on.
 
