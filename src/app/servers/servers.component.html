@@ -30,8 +30,7 @@
 <p [innerText]="allowNewServer"></p>
 <p>{{ serverCreationStatus }}</p>
 
-<app-server></app-server>
-<app-server></app-server> -->
+<app-server></app-server> --->
 
 <label>Username</label>
 <input type="text" class="form-control" [(ngModel)]="userName" />
@@ -47,4 +46,16 @@
 <button class="btn btn-success mb-3" (click)="onCreateUser()">
   Add User
 </button>
-<p>{{ userCreationStatus }}</p>
+<!-- <p>{{ userCreationStatus }}</p> -->
+<p *ngIf="userCreation; else noUser">
+  User was created, Username is {{ userName }}
+</p>
+<ng-template #noUser>
+  <p>No user was created.</p>
+</ng-template>
+
+<!-- users here is the property we defined in the Typescript file and
+   this will now loop through all elements n this array and assign the 
+   individual element to this dynamic "user variable",
+  so Just like normally Loop at Javascript code, the for/of loop -->
+<app-server *ngFor="let user of users"></app-server>
