@@ -18,7 +18,7 @@ export class ServersComponent implements OnInit {
   userName = 'Username';
   userCreationStatus = 'No user was created !!';
   userCreation = false;
-  users = ['', '', '']; // Add how many on users created (default)
+  users = ['', '']; // Add how many on users created (default)
 
   constructor() {
     setTimeout(() => {
